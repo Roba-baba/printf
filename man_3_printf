@@ -1,46 +1,30 @@
-.TH _PRINTF "1" "26 March 2023" "0x11" "_printf man page"
+.TH man 3 "19 April 2022" "1.0" "_printf man page"
 .SH NAME
-_printf - print data and format
+.B _printf
+- A simple re-creation of the printf function
 .SH SYNOPSIS
-.B printf FORMAT [ARGUMENT]...
+To use this function the #include "main.h" header is needed.
 .SH DESCRIPTION
-Prints ARGUMENT(s) based on FORMAT
-
-If format includes format specifiers (subsequences beginning with %), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.
-
-_printf will also take an indefinite amount of arguments.
-
-Example:
-_printf("%s", text);
-
-In the Example print the value of text with %s give the format of text.
-
-.B The conversion specifiers
-
-.IP %c
-- prints character.
-.IP %s
-- prints string.
-.IP %%
-- prints percentage symbol.
-.IP %d
-- prints decimal.
-.IP %i
-- prints integer number.
-.IP %b
-- prints binary representation.
-.IP %p
-- prints pointer.
-.IP %o
-- prints octal representation.
-.IP %r
-- prints string in reverse.
-.IP %u
-- prints unsigned integer.
-.IP %x
-- prints hexadecimal representation.
-
+The _printf() function produces output according to a format which is described
+below. This function writes its output to the stdout,the standard output stream.
+.SH USAGE
+To use _printf you have to use the following key characters preceeded by % symbol.
+.RS 3
+%c: To be used to print characters
+.RS 0
+%s: To be used to print strings
+.RS 0
+%d: To print integers of max and min size of an int type
+.RS 0
+%i: To print integers of max and min size of an int type
+.RS 0
+%b: To print a number in binary form
+.SH RETURN VALUES
+The _printf() function returns an integer representing the number of symbols
+printed not counting \\0 for the string.
 .SH SEE ALSO
-.I printf (3)
+.I printf(3)
+.SH BUGS
+No known bugs.
 .SH AUTHOR
 Roba-guru
